@@ -151,6 +151,39 @@ body {
     background-color: #333;
 }
 
+/* Secondary variant — light filled button */
+.download-button.secondary {
+    background-color: #e6e5e0;
+    border: none;
+    color: #333;
+}
+
+.download-button.secondary:hover {
+    background-color: #D8D6CE;
+}
+
+.download-button.secondary:active {
+    background-color: #D8D6CE;
+}
+
+/* Tertiary variant — outline button (Hobby CTA) */
+.download-button.tertiary {
+    background-color: transparent;
+    border: 1px solid rgba(38, 37, 30, 0.25);
+    color: #26251e;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.download-button.tertiary:hover {
+    background-color: rgba(38, 37, 30, 0.06);
+    border-color: rgba(38, 37, 30, 0.4);
+}
+
+.download-button.tertiary:active {
+    background-color: rgba(38, 37, 30, 0.1);
+    border-color: rgba(38, 37, 30, 0.5);
+}
+
 /* --- Dev badge (top of page) --- */
 .page-label {
     position: fixed;
