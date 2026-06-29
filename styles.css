@@ -1,106 +1,126 @@
+/* ==========================================================================
+   Pricing Cards — Stylesheet
+   Design tokens: warm neutrals, Inter type, pill buttons
+   ========================================================================== */
+
+/* --- Reset --- */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Include padding/border in element width */
 }
 
+/* --- Page layout --- */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #f7f7f4;
+    background-color: #f7f7f4; /* Page background — warm off-white */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; /* Vertically center cards on screen */
     min-height: 100vh;
     padding: 20px;
 }
 
+/* --- Cards row --- */
 .cards-container {
     display: flex;
     flex-direction: row;
-    gap: 24px;
+    gap: 24px; /* Space between cards */
     flex-wrap: nowrap;
     justify-content: center;
     align-items: flex-start;
 }
 
+/* --- Single pricing card --- */
 .card {
     display: flex;
     flex-direction: column;
-    min-height: 380px;
-    background-color: #f2f1ed;
+    min-height: 380px; /* Keeps cards equal height */
+    background-color: #f2f1ed; /* Card surface — slightly darker than page */
     border-radius: 4px;
     padding: 16px;
-    width: 320px;
+    width: 320px; /* Fixed card width */
     flex-shrink: 0;
 }
 
+/* Top section: title, price, feature list */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+/* Plan name (e.g. Hobby, Pro) */
 .card-title {
     font-size: 22px;
     line-height: 28px;
     font-weight: 400;
-    color: #26251e;
+    color: #26251e; /* Primary text — near-black warm tone */
     margin-bottom: 8px;
 }
 
+/* Price row container */
 .card-price {
     font-size: 20px;
-    color: rgba(38, 37, 30, 0.5);
+    color: rgba(38, 37, 30, 0.5); /* Muted text at 50% opacity */
     display: inline-flex;
-    align-items: baseline;
+    align-items: baseline; /* Align amount and "/mo." on baseline */
 }
 
+/* Price value (e.g. Free, $20) */
 .card-price-amount {
     font-size: 22px;
     font-weight: 400;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Billing period (e.g. /mo.) */
 .card-price-period {
     font-size: 14px;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Feature list block */
 .card-content {
     margin-bottom: 32px;
 }
 
+/* "Includes:" / "Everything in Hobby, plus:" label */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
 
+/* Feature bullet list — no default bullets */
 .features-list {
     list-style: none;
     padding: 0;
 }
 
+/* Single feature row */
 .features-list li {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 8px; /* Vertical spacing between features */
     font-size: 16px;
     color: #26251e;
 }
 
+/* Checkmark icon before each feature */
 .checkmark {
     color: #26251e;
     font-size: 14px;
-    margin-right: 10px;
+    margin-right: 10px; /* Gap between check and text */
     font-weight: 400;
 }
 
+/* --- Buttons --- */
 .download-button {
-    margin-top: auto;
+    margin-top: auto; /* Pins button to bottom of card */
     width: fit-content;
-    background-color: #e6e5e0;
+    background-color: #e6e5e0; /* Secondary — light gray fill */
     border: none;
-    border-radius: 999px;
+    border-radius: 999px; /* Full pill shape */
     padding: 14px 24px;
     font-size: 16px;
     font-weight: 500;
@@ -117,6 +137,7 @@ body {
     background-color: #D8D6CE;
 }
 
+/* Primary variant — dark filled button (Pro CTA) */
 .download-button.primary {
     background-color: #111;
     color: #fff;
@@ -130,11 +151,12 @@ body {
     background-color: #333;
 }
 
+/* --- Dev badge (top of page) --- */
 .page-label {
     position: fixed;
     top: 16px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Horizontally center badge */
     font-size: 14px;
     color: #666;
     background: #fff;
